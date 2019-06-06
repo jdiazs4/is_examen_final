@@ -41,15 +41,27 @@ public class PascalTriangleTest {
      * Test of build method, of class PascalTriangle.
      */
     @Test
-    public void testBuild() {
-        System.out.println("build");
-        int levels = 0;
+    public void TestValorMenorCero() {
+        System.out.println("TEST #1 - Valor menor a cero");
         PascalTriangle instance = new PascalTriangle();
-        String expResult = "";
+        
+        int levels = -1;
+        
+        String expResult = "[]";
         String result = instance.build(levels);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals("Test #1 - Fallo",expResult, result);
+    }
+    
+    @Test
+    public void TestValorNumeroPositivo() {
+        System.out.println("TEST #2 - Numero positivo");
+        PascalTriangle instance = new PascalTriangle();
+        
+        int levels = 2;
+        
+        String expResult = "[1[1, 1]]";
+        String result = instance.build(levels);
+        assertEquals("Test #2 - Fallo",expResult, result);
     }
     
 }
