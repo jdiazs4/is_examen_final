@@ -88,4 +88,15 @@ public class BubbleSortTest {
         assertArrayEquals("Test #4 - Fallo",expResult, result);
     }
     
+    @Test
+    public void TestCaracteresGrandes() {
+        System.out.println("TEST #5 - Caracteres grandes");
+        
+        int[] numbers =   {20000,88545,85457,15426457,202534555};
+        int[] expResult = {20000,85457,88545,15426457,202534555};
+        
+        int[] result = BubbleSort.sortBasic(numbers);
+        
+        assertArrayEquals("Test #5 - Fallo",expResult, result);
+    }
 }
